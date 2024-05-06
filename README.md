@@ -17,25 +17,24 @@ MyNotesApp is a simple note-taking application built with Node.js and Express. I
 2. **Install dependencies:**
 
    ```
-   cd mynotesapp
    npm install
    ```
 
-3. **Set up environment variables:**
-
-   Create a `.env` file in the root directory and provide the following variables:
-
-   ```
-   PORT=3000
-   ```
-
-4. **Start the application:**
+3. **Start the application:**
 
    ```
    npm run serve
    ```
 
    The application will be running on `http://localhost:3000` by default.
+
+4. **To run the testcases:**
+ ```
+   npm test
+```
+5. **Postman collect:**
+Find postman collection in root folder's "Notes API - expressJS.postman_collection" file.
+You can import above collection or see below mentioned endpoints description for better understanding.
 
 ## API Endpoints
 
