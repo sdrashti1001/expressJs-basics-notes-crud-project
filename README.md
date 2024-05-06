@@ -153,7 +153,7 @@ You can import above collection or see below mentioned endpoints description for
   {
     "title": "Updated Note",
     "description": "Updated description",
-    "createdAt":"2023-05-05T17:25:58.781Z" // optional parameter
+    "createdAt":"2023-05-05T17:25:58.781Z" // optional parameter added to test GET byDateRange API
   }
   ```
 
