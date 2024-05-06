@@ -52,6 +52,12 @@ You can import above collection or see below mentioned endpoints description for
   }
   ```
 - **Response:**
+
+```json
+{
+    "message": "User registered successfully"
+}
+```
   - `201 Created` on successful registration.
   - `500 Internal Server Error` if registration fails.
 
@@ -66,12 +72,19 @@ You can import above collection or see below mentioned endpoints description for
   }
   ```
 - **Response:**
+
+ ```json
+ {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIydjI0R01yZ2NTcTRzRzU3IiwidXNlcm5hbWUiOiJkcmFzaHRpIiwiaWF0IjoxNzE0OTcyNTI1LCJleHAiOjE3MTQ5NzYxMjV9.3QJj0I6aS3XexA65JNJzqVeeLj20kdOeL5Pvy7nl40I"
+}
+
+ ```
   - `200 OK` with JWT token on successful login.
   - `400 Bad Request` if username or password is incorrect.
   - `500 Internal Server Error` if login fails.
 
 #### Authorization Process
-- Login: Users authenticate by sending a POST request to /login with their username and password. If the credentials are valid, the server responds with a JWT token.
+- Login: Users authenticate by sending a POST request to /login with their username and password. If the credentials are valid, the server responds with a JWT token. token is valid for 1 hour.
 - Token Generation: Upon successful login, a JWT token is generated containing user information and signed with the secret key.
 - Passing Token: The token must be included in the Authorization header of subsequent requests in the format: Bearer <token>.
 - Token Verification: The server verifies the token's authenticity and extracts user information from it.
